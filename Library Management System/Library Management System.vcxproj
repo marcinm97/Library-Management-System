@@ -151,7 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Library Management System.cpp" />
+    <ClCompile Include="book.cpp" />
+    <ClCompile Include="mainLibrary.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="book.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
