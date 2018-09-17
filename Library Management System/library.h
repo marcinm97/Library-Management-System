@@ -41,7 +41,8 @@ private:
 	void returnBook();
 	void load();
 	void save();
-public:
+public: 
+	//- strored containers
 	static std::map<int, Book> s_bookMap;
 	static std::map<int, Customer> s_customerMap;
 	static std::map<int, int> bookLoanMap;
