@@ -19,6 +19,7 @@
 #include <list>
 #include <initializer_list>
 #include <functional>
+#include "library.h"
 
 class Book {
 private:
@@ -30,13 +31,13 @@ private:
 public:
 	Book() {}
 	Book(const std::string& author, const std::string& title);
-
 	const std::string& author() { return m_author; }
 	const std::string& title() { return m_title; }
 	void read(std::ifstream& inStream);
 	void write(std::ofstream& outStream) const;
 	void borrowBook(int customerId);
 	int reserveBook(int customerId);
+	void returnBook();
 	void unreserveBookation(int customerId);
 	int bookId() const { return m_bookId; }
 	bool borrowed() const { return m_borrowed; }
