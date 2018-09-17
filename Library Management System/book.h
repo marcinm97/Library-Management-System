@@ -20,6 +20,8 @@
 #include <initializer_list>
 #include <functional>
 #include "library.h"
+#include "customer.h"
+
 
 class Book {
 private:
@@ -31,8 +33,8 @@ private:
 public:
 	Book() {}
 	Book(const std::string& author, const std::string& title);
-	const std::string& author() { return m_author; }
-	const std::string& title() { return m_title; }
+	const std::string& author() const { return m_author; }
+	const std::string& title() const { return m_title; }
 	void read(std::ifstream& inStream);
 	void write(std::ofstream& outStream) const;
 	void borrowBook(int customerId);

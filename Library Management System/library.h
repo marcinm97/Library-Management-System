@@ -24,12 +24,12 @@
 
 class Library {
 public:
-	Library() {}
+	Library();
 private:
 	static std::string s_binaryPath;
-	bool lookupBook(const std::string& author, const std::string title, Book* bookPtr = nullptr);
+	bool lookupBook(const std::string& author, const std::string& title, Book* bookPtr = nullptr) const;
 	bool lookupCustomer(const std::string& name, const std::string& address,
-		Customer* customerPtr = nullptr);
+		Customer* customerPtr = nullptr) const;
 	void addBook();
 	void deleteBook();
 	void listBooks();
@@ -44,6 +44,11 @@ private:
 public:
 	static std::map<int, Book> s_bookMap;
 	static std::map<int, Customer> s_customerMap;
+	static std::map<int, int> bookLoanMap;
+	static std::map<int, std::set<int>> bookReservationSetMap;
+
+	static std::map<int, std::set<int>> customerLoanSetMap;
+	static std::map<int, std::set<int>> customerReservationSetMap;
 };
 
 

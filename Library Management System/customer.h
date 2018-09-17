@@ -20,6 +20,7 @@
 #include <initializer_list>
 #include <functional>
 #include "library.h"
+#include "book.h"
 
 class Customer {
 private:
